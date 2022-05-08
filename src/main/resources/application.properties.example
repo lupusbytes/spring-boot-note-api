@@ -1,0 +1,3 @@
+spring.data.mongodb.uri=mongodb+srv://username:password@clusterURL
+spring.data.mongodb.database=notes
+logging.level.org.springframework.data.mongodb.core.MongoTemplate=DEBUG
