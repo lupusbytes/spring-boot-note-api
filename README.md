@@ -67,6 +67,16 @@ Request body example:
 }
 ```
 
+## GET ```/notes/{id}```
+
+Returns the text of the given note `id`
+
+Response body example:
+```
+{
+    "text": "My note text"
+}
+```
 
 ## PUT ```/notes/{id}```
 
@@ -88,18 +98,7 @@ Request body example:
 ## DELETE ```/notes/{id}```
 Deletes a note with the given `id`
 
-Returns HTTP status `204` or `404` depending on if a note exists with this `id`.
-
-## GET ```/notes/{id}/text```
-
-Returns the text of the given note `id`.
-
-Response body example:
-```
-{
-    "text": "My note text"
-}
-```
+Returns HTTP status `204` or `404` depending on if a note exists with this `id`
 
 ## GET ```/notes/{id}/stats```
 
