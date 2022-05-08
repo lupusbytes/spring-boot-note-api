@@ -17,7 +17,7 @@ jobs:
         java-version: '17'
         distribution: 'temurin'
         cache: maven
-    - name: 🛠️ Build and test with Maven
-      run: mvn -B package --file pom.xml
+    - name: 🛠️ Build with Maven
+      run: mvn clean install -DskipTests=true
     - name: 📦 Build the Docker image
       run: docker build . --file Dockerfile --tag lupusbytes/spring-boot-note-api:$(date +%s)
