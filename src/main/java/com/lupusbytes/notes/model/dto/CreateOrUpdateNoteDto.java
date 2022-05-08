@@ -3,9 +3,7 @@ package com.lupusbytes.notes.model.dto;
 import com.lupusbytes.notes.model.Tag;
 
 import javax.validation.constraints.*;
-import java.util.ArrayList;
 import java.util.HashSet;
-import java.util.List;
 import java.util.Set;
 
 public class CreateOrUpdateNoteDto {

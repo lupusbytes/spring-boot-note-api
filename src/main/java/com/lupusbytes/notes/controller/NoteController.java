@@ -8,7 +8,6 @@ import com.lupusbytes.notes.model.dto.NoteTextDto;
 import com.lupusbytes.notes.model.dto.PagedResponse;
 import com.lupusbytes.notes.repository.NoteRepository;
 import com.lupusbytes.notes.service.WordCounter;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
