@@ -13,9 +13,7 @@ import java.util.UUID;
 public interface NoteRepository extends MongoRepository<Note, String> {
     @Query("{id : ?0}")
     Optional<Note> findById(UUID id);
-
-    // If the 'tags' parameter is an empty set, we should not perform filtering.
-    // The second condition in this $or query ensures that.
-    @Query(value="{ $or : [ { tags : { $in : ?0 } }, { $where: '\\'?0\\'.length == 2' } ] } ", fields = "{ 'title' : 1, 'tags' : 1, 'createdDate' : 1 }")
+    
+    @Query(value="{ tags : { $in : ?0 } }", fields = "{ 'title' : 1, 'tags' : 1, 'createdDate' : 1 }")
     Page<Note> findByTags(Set<Tag> tags, Pageable pageable);
 }

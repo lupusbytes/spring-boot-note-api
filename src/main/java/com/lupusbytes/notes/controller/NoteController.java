@@ -34,8 +34,11 @@ public class NoteController {
             @RequestParam(name = "tags", required = false) Set<Tag> tags,
             @RequestParam(defaultValue = "0") int pageNo,
             @RequestParam(defaultValue = "5") int pageSize) {
-        if (tags == null) {
+        if (tags == null || tags.isEmpty()) {
             tags = new HashSet<>();
+            tags.add(Tag.BUSINESS);
+            tags.add(Tag.IMPORTANT);
+            tags.add(Tag.PERSONAL);
         }
 
         Pageable pageable = PageRequest.of(pageNo, pageSize, Sort.by(Sort.Direction.DESC, "createdDate"));
