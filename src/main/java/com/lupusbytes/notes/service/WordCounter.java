@@ -1,11 +1,12 @@
 package com.lupusbytes.notes.service;
 
-import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.Map;
+import java.util.TreeMap;
 
 public class WordCounter {
     public static Map<String, Integer> GetWordCountMap(String text) {
-        HashMap<String, Integer> wordCountMap = new HashMap<>();
+        Map<String, Integer> wordCountMap = new LinkedHashMap<>();
 
         for(String word : text.split(" ")) {
             word = word.toLowerCase();
