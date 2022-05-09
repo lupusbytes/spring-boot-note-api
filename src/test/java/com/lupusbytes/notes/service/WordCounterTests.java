@@ -30,7 +30,7 @@ public class WordCounterTests {
     @Test
     public void GetWordCountMapShouldBeSortedByEntry() {
         // Arrange
-        String input = "a b c d e f g";
+        String input = "t h e q u i c k g r a y f o x";
 
         // Act
         Map<String, Integer> result = WordCounter.GetWordCountMap(input);
